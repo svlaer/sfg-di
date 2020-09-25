@@ -11,10 +11,10 @@ import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 @Configuration
 //@PropertySource({"classpath:datasource.properties", "classpath:jms.properties"})
-@PropertySources({
-        @PropertySource("classpath:datasource.properties"),
-        @PropertySource("classpath:jms.properties")
-})
+//@PropertySources({
+//        @PropertySource("classpath:datasource.properties"),
+//        @PropertySource("classpath:jms.properties")
+//})
 public class propertyConfig {
     @Value("${guru.username}")
     String user;
@@ -52,9 +52,9 @@ public class propertyConfig {
         return jmsBroker;
     }
 
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties() {
-        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-        return propertySourcesPlaceholderConfigurer;
-    }
+//    @Bean
+//    public static PropertySourcesPlaceholderConfigurer properties() {
+//        PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+//        return propertySourcesPlaceholderConfigurer;
+//    }
 }
